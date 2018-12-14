@@ -21,5 +21,6 @@ Case_31_502_FU_CS <- DYNA_Cross[409:437,]
 Case_31_503_FU_CS <- DYNA_Cross[450:481,]
 
 #struts
+
 DYNA_Data_Struts <- read_excel(sheet="OCTresults", "DYNA.xlsx")
 head(DYNA_Data_Struts)
