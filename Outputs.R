@@ -27,3 +27,15 @@ DYN_9M_Summary <- rbind("Mean_Lumen_Area"=LA_Mean_All,"Lumen_Area_St_Dev"=LA_St_
                         "SEI_St_Dev"=SEI_SD,"SEI_Min"=SEI_Min,"SEI_Max"=SEI_Max,"NIH_Mean"=Mean_NIH_All_Cases,"NIH_St_Dev"=SD_NIH,"NIH_Min"=Min_NIH,"NIH_Max"=Max_NIH,"NIH_Obstruction_Mean"=Mean_NIH_Obst,
                         "NIH_Obstruction_St_Dev"=SD_NIH_Obst,"NIH_Obstruction_Min"=Min_NIH_Obst,"NIH_Obstruction_Max"=Max_NIH_Obst)
 col.names(DYN_9M_Summary) <- c("DYNAMX Follow-up Summary"," ")
+
+#tabela struts
+Struts_Summary <- rbind("Number_of_Cases"=Number_of_Cases,"Number_of_Struts"=Total_Number_Of_Struts,"Frames_Analysed"=Number_Of_Frames,
+                        "Mean_Struts_Per_Frame"=Struts_Per_Frame_Mean,"Struts_per_Frame_StDev"=Struts_Per_Frame_St_Dev,"Mean_Struts_Per_Lesion"=Struts_Per_Lesion_Mean,
+                        "Struts_per_Frame_StDev"=Struts_Per_Lesion_St_Dev,"Total_Covered_Struts"=Total_Covered_Struts,"Mean_Covered_Struts_Per_Lesion"=Covered_Struts_Per_Lesion_Mean,
+                        "Covered_Struts_Per_Lesion_St_Dev"=Covered_Struts_Per_Lesion_St_Dev,"Total_Uncovered_Struts"=Total_Uncovered_Struts,
+                        "Mean_Uncovered_Struts_Per_Lesion"=Uncovered_Struts_Per_Lesion_Mean,"Uncovered_Struts_Per_Lesion_St_Dev"=Uncovered_Struts_Per_Lesion_St_Dev,
+                        "Total_NIH_Covered_Struts"=Total_NIH_Covered_Struts,"Mean_NIH_Covered_Struts"=Mean_NIH_Covered_Struts,"SD_NIH_Covered_Struts"=SD_NIH_Covered_Struts)
+
+Output_DYN_9M_By_Case <- write.csv2(DYN_9M_By_Case)
+Output_DYN_9M_Summary <- write.csv2(DYN_9M_Summary)
+Output_DYN_9M_Struts_Summary <- write.csv2(Struts_Summary)

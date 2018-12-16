@@ -52,6 +52,19 @@ Case_31_501_FU_Covered <-sum((Case_31_501_FU_Struts>0))/length(Case_31_501_FU_St
 Case_31_502_FU_Covered <-sum((Case_31_502_FU_Struts>0))/length(Case_31_502_FU_Struts)*100  
 Case_31_503_FU_Covered <-sum((Case_31_503_FU_Struts>0))/length(Case_31_503_FU_Struts)*100 
 
+Case_28_501_FU_Total_Covered <-sum((Case_28_501_FU_Struts>0))
+Case_28_502_FU_Total_Covered <-sum((Case_28_502_FU_Struts>0))
+Case_28_503_FU_Total_Covered <-sum((Case_28_503_FU_Struts>0))
+Case_28_504_FU_Total_Covered <-sum((Case_28_504_FU_Struts>0))
+Case_28_505_FU_Total_Covered <-sum((Case_28_505_FU_Struts>0))
+Case_28_506_FU_Total_Covered <-sum((Case_28_506_FU_Struts>0))
+Case_28_598_FU_Total_Covered <-sum((Case_28_598_FU_Struts>0))
+Case_28_599_FU_Total_Covered <-sum((Case_28_599_FU_Struts>0))
+Case_31_501_FU_Total_Covered <-sum((Case_31_501_FU_Struts>0))
+Case_31_502_FU_Total_Covered <-sum((Case_31_502_FU_Struts>0))
+Case_31_503_FU_Total_Covered <-sum((Case_31_503_FU_Struts>0))
+
+
 Covered_Struts_Per_Lesion_Mean <- mean(c(Case_28_501_FU_Covered,Case_28_502_FU_Covered,
                                          Case_28_503_FU_Covered,Case_28_504_FU_Covered,
                                          Case_28_505_FU_Covered,Case_28_506_FU_Covered,
@@ -64,6 +77,11 @@ Covered_Struts_Per_Lesion_St_Dev <- sd(c(Case_28_501_FU_Covered,Case_28_502_FU_C
                                          Case_28_598_FU_Covered,Case_28_599_FU_Covered,
                                          Case_31_501_FU_Covered,Case_31_502_FU_Covered,Case_31_503_FU_Covered))
 
+Total_Covered_Struts <- sum(c(Case_28_501_FU_Total_Covered,Case_28_502_FU_Total_Covered,
+                              Case_28_503_FU_Total_Covered,Case_28_504_FU_Total_Covered,
+                              Case_28_505_FU_Total_Covered,Case_28_506_FU_Total_Covered,
+                              Case_28_598_FU_Total_Covered,Case_28_599_FU_Total_Covered,
+                              Case_31_501_FU_Total_Covered,Case_31_502_FU_Total_Covered,Case_31_503_FU_Total_Covered))
 
 
 Case_28_501_FU_Uncovered <-100-Case_28_501_FU_Covered
@@ -90,7 +108,11 @@ Uncovered_Struts_Per_Lesion_St_Dev <- sd(c(Case_28_501_FU_Uncovered,Case_28_502_
                                          Case_28_598_FU_Uncovered,Case_28_599_FU_Uncovered,
                                          Case_31_501_FU_Uncovered,Case_31_502_FU_Uncovered,Case_31_503_FU_Uncovered))
 
+Total_Uncovered_Struts <- Total_Number_Of_Struts-Total_Covered_Struts
+
 #NIH das covered
-Covered_NIH <- as.data.frame(as.numeric(Covered$X__6))
-colnames (Covered_NIH) <- "NIH"
-Covered_NIH[,]
+Covered_Filter <- grep("[[:digit:]]",DYNA_Data_Struts$X__6)
+Covered_Tible <- DYNA_Data_Struts[Covered_Filter,7]
+Total_NIH_Covered_Struts <- sum(as.numeric(unlist(Covered_Tible)))
+Mean_NIH_Covered_Struts <- mean(as.numeric(unlist(Covered_Tible)))
+SD_NIH_Covered_Struts <- sd(as.numeric(unlist(Covered_Tible)))
