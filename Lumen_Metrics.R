@@ -111,17 +111,17 @@ Max_LD_Min <- min(c(Case_28_501_Max_LD,Case_28_502_Max_LD,Case_28_503_Max_LD,Cas
 Max_LD_Max <- max(c(Case_28_501_Max_LD,Case_28_502_Max_LD,Case_28_503_Max_LD,Case_28_504_Max_LD,Case_28_505_Max_LD,Case_28_506_Max_LD,Case_28_598_Max_LD,Case_28_599_Max_LD,Case_31_501_Max_LD,Case_31_502_Max_LD,Case_31_503_Max_LD))
 
 #lumen excentricity index ((diâmetro máximo-diâmetro mínimo)/Diâmetro máximo)*100
-Case_28_501_LEI <- ((as.numeric(Case_28_501_FU_CS$L_Max_Diam)-as.numeric(Case_28_501_FU_CS$L_Min_Diam))/as.numeric(Case_28_501_FU_CS$L_Max_Diam))*100
-Case_28_502_LEI <- ((as.numeric(Case_28_502_FU_CS$L_Max_Diam)-as.numeric(Case_28_502_FU_CS$L_Min_Diam))/as.numeric(Case_28_502_FU_CS$L_Max_Diam))*100
-Case_28_503_LEI <- ((as.numeric(Case_28_503_FU_CS$L_Max_Diam)-as.numeric(Case_28_503_FU_CS$L_Min_Diam))/as.numeric(Case_28_503_FU_CS$L_Max_Diam))*100
-Case_28_504_LEI <- ((as.numeric(Case_28_504_FU_CS$L_Max_Diam)-as.numeric(Case_28_504_FU_CS$L_Min_Diam))/as.numeric(Case_28_504_FU_CS$L_Max_Diam))*100
-Case_28_505_LEI <- ((as.numeric(Case_28_505_FU_CS$L_Max_Diam)-as.numeric(Case_28_505_FU_CS$L_Min_Diam))/as.numeric(Case_28_505_FU_CS$L_Max_Diam))*100
-Case_28_506_LEI <- ((as.numeric(Case_28_506_FU_CS$L_Max_Diam)-as.numeric(Case_28_506_FU_CS$L_Min_Diam))/as.numeric(Case_28_506_FU_CS$L_Max_Diam))*100
-Case_28_598_LEI <- ((as.numeric(Case_28_598_FU_CS$L_Max_Diam)-as.numeric(Case_28_598_FU_CS$L_Min_Diam))/as.numeric(Case_28_598_FU_CS$L_Max_Diam))*100
-Case_28_599_LEI <- ((as.numeric(Case_28_599_FU_CS$L_Max_Diam)-as.numeric(Case_28_599_FU_CS$L_Min_Diam))/as.numeric(Case_28_599_FU_CS$L_Max_Diam))*100
-Case_31_501_LEI <- ((as.numeric(Case_31_501_FU_CS$L_Max_Diam)-as.numeric(Case_31_501_FU_CS$L_Min_Diam))/as.numeric(Case_31_501_FU_CS$L_Max_Diam))*100
-Case_31_502_LEI <- ((as.numeric(Case_31_502_FU_CS$L_Max_Diam)-as.numeric(Case_31_502_FU_CS$L_Min_Diam))/as.numeric(Case_31_502_FU_CS$L_Max_Diam))*100
-Case_31_503_LEI <- ((as.numeric(Case_31_503_FU_CS$L_Max_Diam)-as.numeric(Case_31_503_FU_CS$L_Min_Diam))/as.numeric(Case_31_503_FU_CS$L_Max_Diam))*100
+Case_28_501_LEI <- ((Case_28_501_Max_LD-Case_28_501_Min_LD)/Case_28_501_Max_LD)*100
+Case_28_502_LEI <- ((Case_28_502_Max_LD-Case_28_502_Min_LD)/Case_28_502_Max_LD)*100
+Case_28_503_LEI <- ((Case_28_503_Max_LD-Case_28_503_Min_LD)/Case_28_503_Max_LD)*100
+Case_28_504_LEI <- ((Case_28_504_Max_LD-Case_28_504_Min_LD)/Case_28_504_Max_LD)*100
+Case_28_505_LEI <- ((Case_28_505_Max_LD-Case_28_505_Min_LD)/Case_28_505_Max_LD)*100
+Case_28_506_LEI <- ((Case_28_506_Max_LD-Case_28_506_Min_LD)/Case_28_506_Max_LD)*100
+Case_28_598_LEI <- ((Case_28_598_Max_LD-Case_28_598_Min_LD)/Case_28_598_Max_LD)*100
+Case_28_599_LEI <- ((Case_28_599_Max_LD-Case_28_599_Min_LD)/Case_28_599_Max_LD)*100
+Case_31_501_LEI <- ((Case_31_501_Max_LD-Case_31_501_Min_LD)/Case_31_501_Max_LD)*100
+Case_31_502_LEI <- ((Case_31_502_Max_LD-Case_31_502_Min_LD)/Case_31_502_Max_LD)*100
+Case_31_503_LEI <- ((Case_31_503_Max_LD-Case_31_503_Min_LD)/Case_31_503_Max_LD)*100
 LEI_By_Case <- c(Case_28_501_LEI,Case_28_502_LEI,Case_28_503_LEI,Case_28_504_LEI,Case_28_505_LEI,Case_28_506_LEI,Case_28_598_LEI,Case_28_599_LEI,Case_31_501_LEI,Case_31_502_LEI,Case_31_503_LEI)
 LEI_Mean <- mean(c(Case_28_501_LEI,Case_28_502_LEI,Case_28_503_LEI,Case_28_504_LEI,Case_28_505_LEI,Case_28_506_LEI,Case_28_598_LEI,Case_28_599_LEI,Case_31_501_LEI,Case_31_502_LEI,Case_31_503_LEI))
 LEI_SD <- sd(c(Case_28_501_LEI,Case_28_502_LEI,Case_28_503_LEI,Case_28_504_LEI,Case_28_505_LEI,Case_28_506_LEI,Case_28_598_LEI,Case_28_599_LEI,Case_31_501_LEI,Case_31_502_LEI,Case_31_503_LEI))
