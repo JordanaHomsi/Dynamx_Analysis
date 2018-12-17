@@ -22,7 +22,7 @@ colnames(DYN_9M_By_Case)<-c("CaseID","FU_Time(Mts)","Mean_Lumen_Area(mm²)","Min
                       "Min_Stent_Diam(mm)","Max_Stent_Diam(mm)","SEI","Mean_NIH_Area(mm²)","NIH_Obstruction(%)")
 
 #tabela resumo
-DYN_9M_Summary <- rbind("Mean_Lumen_Area(mm²)"=LA_Mean_All,"Lumen_Area_St_Dev"=LA_St_Dev,"Mean_Lumen_Area_Minimum(mm²)"=LA_Mean_Min,"Mean_Lumen_Area_Maximum(mm²)"=LA_Mean_Max,"Minimum_Lumen_Area_Mean(mm²)"=Min_LA_Mean_All,"Minimum_Lumen_Area_St_Dev"=Min_LA_SD,
+DYN_9M_Summary <- rbind("Number_of_cases"=Number_of_Cases, "Mean_Lumen_Area(mm²)"=LA_Mean_All,"Lumen_Area_St_Dev"=LA_St_Dev,"Mean_Lumen_Area_Minimum(mm²)"=LA_Mean_Min,"Mean_Lumen_Area_Maximum(mm²)"=LA_Mean_Max,"Minimum_Lumen_Area_Mean(mm²)"=Min_LA_Mean_All,"Minimum_Lumen_Area_St_Dev"=Min_LA_SD,
                         "Minimum_Lumen_Area_Min(mm²)"=Min_LA_Min,"Minimum_Lumen_Area_Max(mm²)"=Min_LA_Max,"Maximum_Lumen_Area_Mean(mm²)"=Max_LA_Mean_All,"Maximum_Lumen_Area_St_Dev"=Max_LA_SD,"Maximum_Lumen_Area_Min(mm²)"=Max_LA_Min,"Maximum_Lumen_Area_Max(mm²)"=Max_LA_Max,
                         "Average_Lumen_Diameter_Mean(mm)"=Avg_LD_Mean,"Average_Lumen_Diameter_St_Dev"=Avg_LD_SD,"Average_Lumen_Diameter_Min(mm)"=Avg_LD_Min,"Average_Lumen_Diameter_Max(mm)"=Avg_LD_Max,"Minimum_Lumen_Diameter_Mean(mm)"=Min_LD_Mean,"Minimum_Lumen_Diameter_St_Dev"=Min_LD_SD,"Minimum_Lumen_Diameter_Min(mm)"=Min_LD_Min,
                         "Minimum_Lumen_Diameter_Max(mm)"=Min_LD_Max,"Maximum_Lumen_Diameter_Mean(mm)"=Max_LD_Mean,"Maximum_Lumen_Diameter_St_Dev"=Max_LD_SD,"Maximum_Lumen_Diameter_Min(mm)"=Max_LD_Min,"Maximum_Lumen_Diameter_Max(mm)"=Max_LD_Max,"LEI_Mean"=LEI_Mean,"LEI_St_Dev"=LEI_SD,"LEI_Min"=LEI_Min,"LEI_Max"=LEI_Max,
@@ -45,5 +45,7 @@ colnames(Struts_Summary) <- c("Values")
 Output_DYN_9M_By_Case <- write.csv2(DYN_9M_By_Case,"Dynamx_FU_By_Case.csv",row.names = F)
 Output_DYN_9M_Summary <- write.csv2(DYN_9M_Summary,"Dynamx_FU_Summary.csv")
 Output_DYN_9M_Struts_Summary <- write.csv2(Struts_Summary,"Dynamx_FU_Struts_Summary.csv")
+
+
 
           
