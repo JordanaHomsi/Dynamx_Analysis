@@ -39,4 +39,7 @@ Case_28_522_BI_CS <- Baseline_Data[117:151,]
 Case_28_598_BI_CS <- Baseline_Data[152:190,]
 Case_28_599_BI_CS <- Baseline_Data[191:226,]
 
-
+#baseline struts
+DYNA_Data_Struts_BI <- read_excel(sheet="OCTresults", "Baseline_Data.xlsx")
+head(DYNA_Data_Struts_BI)
+colnames(DYNA_Data_Struts_BI) <- c('Case','Description','Numbers','Angle','StrutDistanceStentCenter','StentContourDistance','StrutDistanceLumenCenter','ShortestDistanceStrutLumen','Description')
