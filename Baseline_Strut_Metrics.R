@@ -58,10 +58,6 @@ Case_28_599_BI_Malapposed_Percent <- (Case_28_599_BI_Malapposed/Case_28_599_BI_S
 #Malapposed % overall
 Malapposed_Struts_Percent_BI <- round((Total_Malapposed_Struts_BI/Total_Number_Of_Struts_BI)*100,2)
 #Malapposed strut to lumen distance
+Test_Filter <- as.numeric(unlist(Case_28_518_BI_Rows$StrutDistanceLumenCenter))<=(-0.11)
+as.numeric(unlist(Case_28_518_BI_Rows[Test_Filter,7]))
 
-
-
-
-
-
-                                 
